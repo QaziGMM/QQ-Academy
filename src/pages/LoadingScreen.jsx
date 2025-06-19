@@ -1,8 +1,10 @@
 import React from "react";
 import quranLogo from "../assets/quran-logo.png"; // Replace with your logo
+import TransitionWraper from "../components/TransitionWraper";
 
 const LoadingScreen = () => {
   return (
+    <TransitionWraper>
     <div className="w-full h-screen bg-gradient-to-br from-[#073b4c] via-[#118ab2] to-[#06d6a0] flex items-center justify-center">
       <div className="text-center">
         <img
@@ -20,6 +22,7 @@ const LoadingScreen = () => {
         </p>
       </div>
     </div>
+    </TransitionWraper>
   );
 };
 

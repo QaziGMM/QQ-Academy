@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import quranLogo from "../assets/quran-logo.png"; // ✅ same logo as loading screen
+import TransitionWraper from "../components/TransitionWraper";
 
 const WelcomeScreen = () => {
   const navigate = useNavigate();
 
   return (
+    <TransitionWraper>
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#073b4c] via-[#118ab2] to-[#06d6a0] text-white px-4 text-center">
       
       {/* 🔵 Bouncing Quran Logo */}
@@ -36,6 +38,7 @@ const WelcomeScreen = () => {
         </button>
       </div>
     </div>
+    </TransitionWraper >
   );
 };
 
